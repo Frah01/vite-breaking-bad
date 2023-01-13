@@ -23,7 +23,6 @@ export default {
                 <CharacterCard v-for="(item, index) in store.charactersList" :key="index" :character="item"/>
             </div>
         </div>
-
     </div>
 </template>
 <style lang="scss" scoped>

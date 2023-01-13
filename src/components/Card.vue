@@ -26,7 +26,7 @@ export default {
         margin-top: 10px;
         color: white;
     }
-
+    
     img {
         box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.5);
     }
