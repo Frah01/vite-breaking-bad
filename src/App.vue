@@ -1,13 +1,13 @@
 <script>
 import axios from 'axios'
 import AppHeader from './components/AppHeader.vue';
-import CharacterList from './components/List.vue';
+import List from './components/List.vue';
 import { store } from './components/store.js';
 // loaded
 export default {
   components: {
     AppHeader,
-    CharacterList
+    List
   },
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
   <div>
     <AppHeader message="Yu-GiOh App"/>
     <main>
-      <CharacterList />
+      <List />
     </main>
   </div>
 </template>
