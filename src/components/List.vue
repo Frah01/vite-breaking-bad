@@ -19,7 +19,7 @@ export default {
             sto caricando
         </div>
         <div v-else>
-            <div class="card-container ">
+            <div class="card-container d-flex justify-content-between flex-wrap">
                 <CharacterCard v-for="(item, index) in store.charactersList" :key="index" :character="item"/>
             </div>
         </div>
