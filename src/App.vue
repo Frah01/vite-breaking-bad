@@ -19,11 +19,8 @@ export default {
   },
   methods: {
     getCharacters() {
-      axios.get(store.url).then((response) => {
+      axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype='Alien").then((response) => {
         store.charactersList = response.data.data
-        setTimeout(() => {
-          store.loading = false
-        }, 2000)
       })
     },
     searchCard(){

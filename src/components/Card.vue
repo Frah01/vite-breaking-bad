@@ -9,7 +9,7 @@ export default {
   <div class="character text-center d-flex flex-column">
         <img :src="character.card_images[0].image_url_small" :alt="character.name" class="img-fluid">
     <h4>{{character.name}}</h4>
-    <div>{{character.race}}</div>
+    <div>{{character.archetype}}</div>
   </div>
 </template>
 <style lang="scss" scoped>

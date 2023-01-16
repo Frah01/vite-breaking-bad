@@ -1,6 +1,7 @@
 import { reactive } from 'vue';
 export const store = reactive({
-    url: "https://db.ygoprodeck.com/api/v7/cardinfo.php?race=insect",
+    url: "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype='Alien",
+    url_2: "",
     charactersList: [],
-    apiNameParameter: 'name',
+    select: '',
 })
