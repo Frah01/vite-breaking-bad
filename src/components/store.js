@@ -4,5 +4,5 @@ export const store = reactive({
     charactersList: [],
     select: '',
     cards: [],
-    loading: false,
+    loading: true,
 })
