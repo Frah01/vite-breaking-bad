@@ -3,7 +3,7 @@ import axios from 'axios'
 import AppHeader from './components/AppHeader.vue';
 import List from './components/List.vue';
 import { store } from './components/store.js';
-// loaded
+
 export default {
   components: {
     AppHeader,
@@ -25,6 +25,9 @@ export default {
           store.loading = false
         }, 2000)
       })
+    },
+    searchCard(){
+      this.$emit('search', this.searchOption);
     }
   }
 }
@@ -33,7 +36,7 @@ export default {
   <div>
     <AppHeader message="Yu-GiOh App"/>
     <main>
-      <List />
+      <List @search="getCharacters" />
     </main>
   </div>
 </template>

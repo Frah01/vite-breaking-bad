@@ -8,7 +8,14 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            searchText: "",
+        }
+    },
+    methods:{
+        search(word) {
+            this.$emit('search');
+            
         }
     }
 }
@@ -19,6 +26,20 @@ export default {
             sto caricando
         </div>
         <div v-else>
+            <div class="container" >
+                <div class="row" >
+                    <div class="col-10 offset-1 my-1" >
+                        <select  v-model="searchText" @change="$emit('search', searchOption)">
+                        <Option>
+                            Spellcaster
+                        </Option>
+                        <Option>
+                            Insect
+                        </Option>
+                    </select>
+                    </div>
+                </div>
+            </div>
             <div class="card-container d-flex justify-content-between flex-wrap">
                 <CharacterCard v-for="(item, index) in store.charactersList" :key="index" :character="item"/>
             </div>

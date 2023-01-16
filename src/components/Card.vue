@@ -9,7 +9,7 @@ export default {
   <div class="character text-center d-flex flex-column">
         <img :src="character.card_images[0].image_url_small" :alt="character.name" class="img-fluid">
     <h4>{{character.name}}</h4>
-    <div>{{character.archetype}}</div>
+    <div>{{character.race}}</div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -26,7 +26,7 @@ export default {
         margin-top: 10px;
         color: white;
     }
-    
+
     img {
         box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.5);
     }
