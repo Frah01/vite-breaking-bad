@@ -29,13 +29,12 @@ export default {
 }
 </script>
 <template lang="">
-    <div class="container">
+    <div class="container text-center">
         <AppSelect :archetype="store.charactersList" @selection="select_archetype"></AppSelect>
         <h2>Trovate {{store.cards.length}} Carte</h2>
         <div class="d-flex" v-if="store.loading">
-            <div>Scegli la tua categoria</div>
-           <div class="loading">
             
+            <div class="loading">
             <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
            </div>
             
@@ -55,6 +54,10 @@ export default {
 }
 
 .loading {
+    position: absolute;
+    top: 25%;
+    right: 45%;
+    translate: transform(-25%, -45%);
     .lds-roller {
   display: inline-block;
   position: relative;

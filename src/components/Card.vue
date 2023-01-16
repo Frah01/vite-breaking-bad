@@ -13,9 +13,9 @@ export default {
 }
 </script>
 <template lang="">
-  <div class="character text-center d-flex flex-column" >
-    <div class="container_card flex-wrap">
-            <div  v-for="(value, index) in store.cards" :key="index">
+  <div class="character" >
+    <div class="container_card">
+            <div v-for="(value, index) in store.cards" :key="index">
                     <AppCardVF :url="value.card_images[0].image_url" :title="value.name" :type="value.archetype" />
                 </div>
             </div>
