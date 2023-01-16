@@ -1,17 +1,12 @@
 <script>
-import CharacterCard from './Card.vue';
-import { store } from './components/store.js';
+
 export default {
-    computed: {
-        CharacterCard,
-    },
     props: {
         archetype : Object,
     },
     data(){
         return{
             change: '',
-            store,
         }
     }
 }
@@ -20,11 +15,14 @@ export default {
     <div>
         <div class="container" >
                 <div class="row" >
-                    <!-- <div class="col-10 offset-1 my-1" >
-                        <select  v-model="searchText" @change="$emit('search', change)" v-model="change">
-                        <Option v-for="(item, index) in store.charactersList" :key="index" :character="item">
+                    <div class="col-10 offset-1 my-1" >
+                        <select class="form-select p-1" name="select-type" id="select-type" v-model="change"
+                        @change="$emit('selection', change)">
+                        <option value="" disabled selected>Select your archetype</option>
+                        <option v-for="(value, index) in archetype" :key="index" :value="value.archetype_name">
+                            {{ value.archetype_name }}</option>
                     </select>
-                    </div> -->
+                    </div>
                 </div>
             </div>
     </div>

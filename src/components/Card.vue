@@ -1,15 +1,24 @@
 <script>
+import AppCardVF from './AppCardVF.vue';
+import {store} from './store.js'
 export default {
-    props: {
-        character: Object
+    components:{
+        AppCardVF,
+    },
+    data(){
+        return{
+            store,
+        }
     }
 }
 </script>
 <template lang="">
-  <div class="character text-center d-flex flex-column">
-        <img :src="character.card_images[0].image_url_small" :alt="character.name" class="img-fluid">
-    <h4>{{character.name}}</h4>
-    <div>{{character.archetype}}</div>
+  <div class="character text-center d-flex flex-column" >
+    <div class="container_card flex-wrap">
+            <div v-for="(value, index) in store.cards" :key="index">
+                    <AppCardVF :url="value.card_images[0].image_url" :title="value.name" :type="value.archetype" />
+                </div>
+            </div>
   </div>
 </template>
 <style lang="scss" scoped>

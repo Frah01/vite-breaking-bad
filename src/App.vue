@@ -7,7 +7,7 @@ import { store } from './components/store.js';
 export default {
   components: {
     AppHeader,
-    List
+    List,
   },
   data() {
     return {
@@ -19,8 +19,9 @@ export default {
   },
   methods: {
     getCharacters() {
-      axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype='Alien").then((response) => {
-        store.charactersList = response.data.data
+      // OGGETTI SELECT
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then((response) => {
+        store.charactersList = response.data
       })
     },
     searchCard(){
@@ -31,7 +32,7 @@ export default {
 </script>
 <template lang="">
   <div>
-    <AppHeader message="Yu-GiOh App"/>
+    <AppHeader message="Yu-GiOh Api"></AppHeader>
     <main>
       <List @search="getCharacters" />
     </main>
