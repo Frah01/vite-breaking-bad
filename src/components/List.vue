@@ -49,7 +49,6 @@ export default {
 <style lang="scss" scoped>
 .card-container {
     margin: 0 auto;
-    width: 90%;
     background-color: white;
 }
 

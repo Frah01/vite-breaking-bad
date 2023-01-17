@@ -14,17 +14,20 @@ export default {
 </script>
 <template lang="">
   <div class="character" >
-    <div class="container_card">
-            <div v-for="(value, index) in store.cards" :key="index">
+    <div class="container_card d-flex flex-wrap justify-content-around">
+            <div class="cards m-2" v-for="(value, index) in store.cards" :key="index">
                     <AppCardVF :url="value.card_images[0].image_url" :title="value.name" :type="value.archetype" />
                 </div>
             </div>
   </div>
 </template>
 <style lang="scss" scoped>
+
+.cards{
+    width: calc(100% / 4);
+}
 .character {
     border: 1px solid black;
-    width: 200px;
     margin: 1em 1em;
     padding: 1em;
     background-color: rgb(236, 174, 3);
