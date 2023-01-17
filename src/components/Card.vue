@@ -25,6 +25,7 @@ export default {
 
 .cards{
     width: calc(100% / 4);
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.5);
 }
 .character {
     border: 1px solid black;
