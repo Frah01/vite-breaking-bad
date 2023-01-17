@@ -31,7 +31,7 @@ export default {
     border: 1px solid black;
     margin: 1em 1em;
     padding: 1em;
-    background-color: rgb(236, 174, 3);
+    background-color: rgb(53, 62, 65);
     border: 1px solid black;
 
     h4 {

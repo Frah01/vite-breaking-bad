@@ -50,7 +50,12 @@ export default {
 .card-container {
     margin: 0 auto;
     background-color: white;
+
+   
 }
+h2{
+      color: white;
+    }
 
 .loading {
     position: absolute;
